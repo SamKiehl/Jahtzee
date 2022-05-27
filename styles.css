@@ -1,0 +1,42 @@
+h1{
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+
+}
+body{
+    background-color: #aa0000;
+    margin: 2.5%;
+}
+#r, #t, #p, .m{
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 45px;
+}
+.but2 {
+    background-color: #4CAF50; /* Green */
+    border: thin solid darkgreen;
+    color: white;
+    padding: 1px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+img{
+    background-color: white;
+    border-radius: 10%;
+    height: 100%;
+    width: 100%;
+}
+.float-container {
+    border: 3px;
+    padding: 20px;
+}
+
+.float-child {
+    width: 30%;
+    float: left;
+    padding: 20px;
+    border: 2px;
+}  
