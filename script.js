@@ -65,6 +65,11 @@ function rtd(indices){
 }
 
 function keep(i){
+    if(inds[i] === -1){
+        inds[i] = i;
+        document.getElementById(i).style = 'color: black; background-color: white; border: thick solid black';
+        return;
+    }
     inds[i] = -1;
     document.getElementById(i).style = 'color: black; background-color: green; border: thick solid black';
 }
