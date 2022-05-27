@@ -55,9 +55,9 @@ function rtd(indices){
         let addition = Math.floor(Math.random() * 6 + 1);
         dice[i] = addition;
     }
-    r.innerHTML = 'Rolls:\n<button class=\'but2\' onclick=\'rtd(inds)\'>Reroll</button>';
+    r.innerHTML = 'Rolls (click to keep):\n<button class=\'but2\' onclick=\'rtd(inds)\'>Reroll</button>';
     for(let i = 0; i< dice.length; i++)
-        r.innerHTML += `<div id=\'${i}\' style=\'color: black; background-color: white; border: thick solid black;\'><p>${dice[i]}</p><button class=\'but2\' onclick='keep(${i})'>keep</button></div>`;
+        r.innerHTML += `<div id=\'${i}\' onclick='keep(${i})' style=\'color: black; background-color: white; border: thick solid black;\'><p>${dice[i]}</p></div>`;
     total = dice.reduce((a, b) => a + b, 0);
     document.getElementById('t').innerHTML = `<p>Total: ${total}`;
     document.getElementById('p').innerHTML = `<p>Points: ${points} (Upper: ${upper}/63)</p>`;
@@ -123,7 +123,7 @@ function checkAdd(move){
 function getPossibleMoves(){
     let m = document.getElementById('m');
     for(let elem in possibleMoves)
-        m.innerHTML += `<div class = \'m\'id=\'${possibleMoves[elem]}\'style=color: black; background-color: yellow; display: inline-block; border-radius: 2%; border: thin solid orange; top: 1%;><p>${possibleMoves[elem]}</p><button class=\'but2\' onclick=rm(\'${possibleMoves[elem]}\')>\t✓</button></div>`;
+        m.innerHTML += `<div class = \'m\'id=\'${possibleMoves[elem]}\' onclick=rm(\'${possibleMoves[elem]}\') style=\'color: black; background-color: slategray; display: inline-block; border-radius: 2%; border: thin solid black; padding-top: 1%; padding-left: 5%; padding-right: 5%;\'><p>${possibleMoves[elem]}</p></div><br>`;
 }
 
 function rm(ele){
